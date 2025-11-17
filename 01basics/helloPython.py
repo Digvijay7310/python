@@ -4,3 +4,6 @@ def chai(n):
     print(n)
 
 chai("lemon tea")
+
+def sum(a, b):
+    print(a + b)
