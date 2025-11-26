@@ -1,0 +1,3 @@
+I learn js then i learn react and then backend.
+ After that i learn nodejs. 
+ Then i jumb to mongoose and build several projects.
