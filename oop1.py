@@ -1,3 +1,47 @@
+class Parent:
+    def parent_info(self):
+        print("This is Parent class.")
+
+class Child1(Parent):
+    def c1_info(self):
+        print("This is Child 1.")
+
+class Child2(Parent):
+    def c2_info(self):
+        print("This is Child 2.")
+
+c1 = Child1()
+c2 = Child2()
+
+c1.parent_info()
+c2.parent_info()
+# Base class
+class A:
+    def show_A(self):
+        print("Class A")
+
+# Child of A
+class B(A):
+    def show_B(self):
+        print("Class B")
+
+# Another child of A
+class C(A):
+    def show_C(self):
+        print("Class C")
+
+# Multiple inheritance (inherits from B and C)
+class D(B, C):
+    def show_D(self):
+        print("Class D")
+
+d = D()
+d.show_A()   # From A
+d.show_B()   # From B
+d.show_C()   # From C
+d.show_D()   # From D
+
+
 
 class GrandFather:
     def grand_info(self):
