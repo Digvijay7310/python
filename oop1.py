@@ -137,7 +137,8 @@ class Account:
 
     def get_crd(self, amount):
         self.bal += amount
-        print("Credited balance", self.get_bal())
+        print("Rs.", amount, "was credit")
+        print("Total balance", self.get_bal())
 
     def get_bal(self):
         return self.bal
