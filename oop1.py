@@ -1,290 +1,154 @@
-<<<<<<< HEAD
-class Student:
-    def __init__(self, fullName):
-        self.fullName = fullName
-        print(self)
-        print("adding new student database...")
-
-
-s1 = Student("Karan")
-print(s1.fullName)
-
-s2 = Student("Arjun")
-print(s2.fullName)
-
-
-
-
-
-
-
-
-# print(s1.name)
-
-
-# s2 = Student()
-# print(s1.name)
-
-
-
-# class Car:
-#     color = "blue"
-#     brand = "mercedies"
-
-
-# car1 = Car()
-# print(car1.color)
-# print(car1.brand)
-=======
-class Parent:
-    def parent_info(self):
-        print("This is Parent class.")
-
-class Child1(Parent):
-    def c1_info(self):
-        print("This is Child 1.")
-
-class Child2(Parent):
-    def c2_info(self):
-        print("This is Child 2.")
-
-c1 = Child1()
-c2 = Child2()
-
-c1.parent_info()
-c2.parent_info()
-# Base class
-class A:
-    def show_A(self):
-        print("Class A")
-
-# Child of A
-class B(A):
-    def show_B(self):
-        print("Class B")
-
-# Another child of A
-class C(A):
-    def show_C(self):
-        print("Class C")
-
-# Multiple inheritance (inherits from B and C)
-class D(B, C):
-    def show_D(self):
-        print("Class D")
-
-d = D()
-d.show_A()   # From A
-d.show_B()   # From B
-d.show_C()   # From C
-d.show_D()   # From D
-
-
-
-class GrandFather:
-    def grand_info(self):
-        print("This is GrandFather.")
-
-class Father(GrandFather):
-    def father_info(self):
-        print("This is Father.")
-
-class Son(Father):
-    def son_info(self):
-        print("This is Son.")
-
-s = Son()
-s.grand_info()    # From GrandFather
-s.father_info()   # From Father
-s.son_info()      # From Son
-
-
-
-# Parent Class 1
-class Father:
-    def father_info(self):
-        print("This is Father class.")
-
-# Parent Class 2
-class Mother:
-    def mother_info(self):
-        print("This is Mother class.")
-
-# Child class inheriting both Father & Mother
-class Child(Father, Mother):
-    def child_info(self):
-        print("This is Child class.")
-
-c = Child()
-c.father_info()
-c.mother_info()
-c.child_info()
-
-
-# Parent Class
-class Animal:
-    def speak(self):
-        print("Animals can make sounds.")
-
-# Child Class (Inheriting Animal)
-class Dog(Animal):
-    def bark(self):
-        print("Dog barks.")
-
-# Object
-d = Dog()
-d.speak()   # From parent
-d.bark()    # From child
+'''
 
 
 class Student:
-    # Constructor (__init__)
-    def __init__(self, name, age, grade):
-        self.name = name      # Instance Variable
-        self.age = age
-        self.grade = grade
+    college_name = "ABC College"
+    name = "anonymous"
 
-    # Method
-    def show_details(self):
-        print(f"Name: {self.name}")
-        print(f"Age: {self.age}")
-        print(f"Grade: {self.grade}")
+    def __init__(self, name, marks):
+        self.name = name
+        self.marks = marks
 
+    def hello(self):
+        print("Welcome student!", self.name)
 
-# Creating Objects of Student class
-student1 = Student("Amit", 20, "A")
-student2 = Student("Riya", 19, "B")
+    def get_marks(self):
+        print(self.marks, "is the marks of", self.name)
 
-# Calling method using objects
-student1.show_details()
-print()       # Just for spacing
-student2.show_details()
-#single inheritance
+s1 = Student("Karan", 98)
+s1.hello()
+s1.get_marks()
+
+'''
 
 
 
-class Parent:
-    def parent_info(self):
-        print("This is Parent class.")
 
-class Child1(Parent):
-    def c1_info(self):
-        print("This is Child 1.")
-
-class Child2(Parent):
-    def c2_info(self):
-        print("This is Child 2.")
-
-c1 = Child1()
-c2 = Child2()
-
-c1.parent_info()
-c2.parent_info()
-# Base class
-class A:
-    def show_A(self):
-        print("Class A")
-
-# Child of A
-class B(A):
-    def show_B(self):
-        print("Class B")
-
-# Another child of A
-class C(A):
-    def show_C(self):
-        print("Class C")
-
-# Multiple inheritance (inherits from B and C)
-class D(B, C):
-    def show_D(self):
-        print("Class D")
-
-d = D()
-d.show_A()   # From A
-d.show_B()   # From B
-d.show_C()   # From C
-d.show_D()   # From D
+# Create student class that makes name and marks 0f 3 subjects as arguments in constructor then create a method to pritn the averge
 
 
-
-class GrandFather:
-    def grand_info(self):
-        print("This is GrandFather.")
-
-class Father(GrandFather):
-    def father_info(self):
-        print("This is Father.")
-
-class Son(Father):
-    def son_info(self):
-        print("This is Son.")
-
-s = Son()
-s.grand_info()    # From GrandFather
-s.father_info()   # From Father
-s.son_info()      # From Son
-
-
-
-# Parent Class 1
-class Father:
-    def father_info(self):
-        print("This is Father class.")
-
-# Parent Class 2
-class Mother:
-    def mother_info(self):
-        print("This is Mother class.")
-
-# Child class inheriting both Father & Mother
-class Child(Father, Mother):
-    def child_info(self):
-        print("This is Child class.")
-
-c = Child()
-c.father_info()
-c.mother_info()
-c.child_info()
-
-
-# Parent Class
-class Animal:
-    def speak(self):
-        print("Animals can make sounds.")
-
-# Child Class (Inheriting Animal)
-class Dog(Animal):
-    def bark(self):
-        print("Dog barks.")
-
-# Object
-d = Dog()
-d.speak()   # From parent
-d.bark()    # From child
-
-
+'''
 class Student:
-    # Constructor (__init__)
-    def __init__(self, name, age, grade):
-        self.name = name      # Instance Variable
-        self.age = age
-        self.grade = grade
+    def __init__(self, name, marks):
+        self.name = name
+        self.marks = marks
 
-    # Method
-    def show_details(self):
-        print(f"Name: {self.name}")
-        print(f"Age: {self.age}")
-        print(f"Grade: {self.grade}")
+    def get_avg(self):
+        sum = 0
+        for value in self.marks:
+            sum += value
+        print("Hi", self.name, "your average score is: ", sum/3) 
 
 
-# Creating Objects of Student class
-student1 = Student("Amit", 20, "A")
-student2 = Student("Riya", 19, "B")
 
-# Calling method using objects
-student1.show_details()
-print()       # Just for spacing
-student2.show_details()
-#single inheritance
->>>>>>> 12382581c79ed57533a0238a02ea0ece807ce489
+s1 = Student("Arjun", [98, 78, 89])
+
+print(s1.name)
+s1.get_avg()
+
+s1.name = 'ironman'
+s1.get_avg()
+
+'''
+
+
+
+'''
+class Student:
+    def __init__(self, name, marks):
+        self.name = name
+        self.marks = marks
+
+    @staticmethod
+    def hello():
+        print("Hello")
+
+    def get_avg(self):
+        sum = 0
+        for value in self.marks:
+            sum += value
+        print("Hi", self.name, "your average score is: ", sum/3) 
+
+
+s1 = Student("tony stark", [99, 98, 97])
+s1.hello()
+s1.get_avg()
+
+'''
+
+
+
+# Object oriented pr
+
+
+# Abstraction 
+
+#  - Hiding the implementation details of a class only showing the essentials features to the users.
+
+
+'''
+
+class Car:
+    def __init__(self):
+        self.acc = False
+        self.brk = False
+        self.clutch = False
+
+    def start(self):
+        self.clutch = True
+        self.acc = True
+        print("car started...")
+
+# Here the unnecessary work like clutch accelataotr not show in result  thats called absraction
+
+    def stop(self):
+        self.clutch = False
+        self.acc = False
+        print("car stop!.")
+
+
+car1 = Car()
+car1.start()
+car1.stop()
+
+'''
+
+
+
+
+# Encapsulation
+# Every thin gwe done before like write static method and hello method in student class and do all work in a single object
+
+
+
+
+# Create Account class with 2 attributes balance and account no. Create methods for debit, credit & printing the balance.
+
+'''
+class Account:
+    def __init__(self, bal, acc):
+        self.bal = bal
+        self.acc = acc
+
+    def get_deb(self, amount):
+        self.bal -= amount
+        print("Rs.", amount, "was debited")
+        print("Total balance", self.get_bal())
+
+    def get_crd(self, amount):
+        self.bal += amount
+        print("Credited balance", self.get_bal())
+
+    def get_bal(self):
+        return self.bal
+
+
+
+a1 = Account(10000, 123456)
+print(a1.get_bal())
+a1.get_deb(890)
+print(a1.get_bal())
+a1.get_crd(1000)
+print(a1.get_bal())
+
+'''
