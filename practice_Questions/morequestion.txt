@@ -1,0 +1,61 @@
+📌 Level 4: Functions
+
+Ek function likho jo number input le aur square return kare.
+
+Ek function likho jo ek list le aur unique elements return kare (set ka use allowed/unallowed dono try).
+
+Ek function likho jo check kare ki string palindrome hai ya nahi.
+
+Ek function banao jo list of numbers ko input le aur average return kare.
+
+Ek function jo do arguments le aur maximum return kare.
+
+📌 Level 5: OOP – Classes, Objects, Inheritance, Encapsulation, Polymorphism
+
+Ek class Car banao jisme attributes ho: brand, model, price
+
+object create karo
+
+details print karo
+
+Ek class BankAccount banao
+
+deposit()
+
+withdraw()
+
+check_balance()
+
+Negative balance avoid karna hai
+
+Inheritance ka example banao:
+
+class: Animal → method: sound()
+
+subclasses: Dog, Cat → apna-apna sound
+
+Ek class Student banao jisme marks list ho
+
+method: calculate_average()
+
+Encapsulation use karte hue ek class Employee banao
+
+private salary attribute
+
+set_salary() and get_salary() methods
+
+📌 Level 6: Combined Concepts (Mini Challenges)
+
+Calculator program (functions + loops).
+
+Mini contact book (dictionary + functions).
+
+To-do list app (list + loops + functions).
+
+Simple ATM simulator (functions + OOP optional).
+
+File handling:
+
+kuch text file me store karo
+
+phir read karke print karo
