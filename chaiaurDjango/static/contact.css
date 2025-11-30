@@ -1,0 +1,105 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0d1b2a; /* Dark blue background */
+    color: #ffffff; /* White text for contrast */
+    padding: 40px;
+}
+
+/* Container for contact info */
+div > .call {
+    background-color: #1b263b; /* Slightly lighter dark blue */
+    border-left: 5px solid #1f77ff; /* Bright blue accent */
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+div > .call:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.call h3 {
+    color: #1f77ff; /* Bright blue headings */
+    margin-bottom: 8px;
+}
+
+.call p {
+    color: #dbe2ef; /* Light gray for text */
+}
+
+/* Message form styling */
+.msg {
+    background-color: #1b263b;
+    padding: 25px;
+    margin-top: 30px;
+    border-radius: 10px;
+    max-width: 500px;
+}
+
+.msg h3 {
+    color: #1f77ff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.msg label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #dbe2ef;
+}
+
+.msg input,
+.msg textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #33475b;
+    background-color: #0d1b2a;
+    color: #ffffff;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.msg input:focus,
+.msg textarea:focus {
+    border-color: #1f77ff;
+}
+
+.msg button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background-color: #1f77ff;
+    border: none;
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.msg button:hover {
+    background-color: #1559b0;
+    transform: scale(1.03);
+}
+
+/* Responsive for smaller screens */
+@media screen and (max-width: 600px) {
+    body {
+        padding: 20px;
+    }
+
+    .msg {
+        padding: 20px;
+    }
+}

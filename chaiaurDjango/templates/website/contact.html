@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chai aur Django Contact page</title>
+    <link rel="stylesheet" href="{% static 'contact.css' %}">
+</head>
+<body>
+    <div>
+        <div class="call">
+            <h3>Call us</h3>
+            <p>+91 9999999999</p>
+        </div>
+        <div class="call">
+            <h3>Our Email</h3>
+            <p>contact@contact.com</p>
+        </div>
+        <div class="call">
+            <h3>Our location</h3>
+            <p>893, nagar haveli chandi pur</p>
+        </div>
+    </div>
+
+    <div class="msg">
+        <h3>Send us a message</h3>
+        <label for="name">Name *</label>
+        <input type="text">
+        <label for="phone">Phone Number *</label>
+        <input type="text">
+        <label for="email">Email *</label>
+        <label for="message">Message *</label>
+        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+        <button type="button">Send</button>
+    </div>
+</body>
+</html>
