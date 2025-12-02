@@ -1,9 +1,48 @@
 {% extends "layout.html" %}
 
 {% block title %}
-chai Page
+Chai Menu
 {% endblock %}
 
 {% block content %}
-<h1>All chai for you</h1>
+
+<h1 class="text-5xl font-extrabold text-center my-10 text-orange-400 drop-shadow-lg">
+    Our Special Chai Menu
+</h1>
+
+<div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 p-6">
+
+    {% for chai in chais %}
+    <div class="bg-blue-900/90 backdrop-blur-lg rounded-2xl shadow-2xl border border-blue-700 
+                hover:scale-105 hover:shadow-orange-500/30 
+                transition-all duration-300 overflow-hidden">
+
+        <img class="w-full h-56 object-cover" src="{{ chai.image.url }}" alt="{{ chai.name }}">
+
+        <div class="p-6">
+
+            <div class="flex justify-between items-center mb-3">
+                <h3 class="text-xl font-bold text-white">{{ chai.name }}</h3>
+
+                <span class="text-lg font-bold bg-green-500 text-white px-3 py-1 rounded-xl shadow">
+                    ₹{{ chai.price }}
+                </span>
+            </div>
+
+            <p class="text-gray-200 text-sm opacity-90 mb-4 line-clamp-2">
+                {{ chai.description }}
+            </p>
+
+            <a href="{% url 'chai_detail' chai.id %}">
+                <button
+                class="w-full bg-orange-600 hover:bg-orange-700 text-white font-semibold py-2.5 rounded-xl shadow-lg transition">
+                    View Details →
+                </button>
+            </a>
+        </div>
+    </div>
+    {% endfor %}
+
+</div>
+
 {% endblock %}
