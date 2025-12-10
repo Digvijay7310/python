@@ -19,6 +19,14 @@
                             <label for="title" class="form-label">Title</label>
                             <input type="text" class="form-control" id="title" name="title" placeholder="Enter blog title" required>
                         </div>
+                        <div class="mb-3">
+                         <label for="category" class="form-label">Category</label>
+                         <select class="form-select" id="category" name="category" required>
+                             {% for value, label in categories %}
+                                 <option value="{{ value }}">{{ label }}</option>
+                             {% endfor %}
+                         </select>
+                     </div>
 
                         <!-- Content Field -->
                         <div class="mb-3">

@@ -22,10 +22,6 @@
         main {
             flex: 1 0 auto;
         }
-        .card:hover {
-            transform: translateY(-3px);
-            transition: 0.2s;
-        }
         .navbar .btn {
             padding: 0.25rem 0.75rem;
         }
@@ -34,6 +30,20 @@
 <body>
 
     <!-- Header / Navbar -->
+    <header id="header">
+        <!-- Collapsible Search Form -->
+        <div class="collapse bg-dark p-3" id="navbarSearch">
+            <form method="GET" action="{% url 'blog_search' %}" class="d-flex flex-wrap">
+                <input class="form-control me-2 mb-2" type="search" name="q" placeholder="Search by title..." aria-label="Search">
+                <select class="form-select me-2 mb-2" name="category">
+                    <option value="all">All Categories</option>
+                    {% for value, label in Blog.CATEGORY_CHOICES %}
+                        <option value="{{ value }}">{{ label }}</option>
+                    {% endfor %}
+                </select>
+                <button class="btn btn-primary mb-2" type="submit">Search</button>
+            </form>
+        </div>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
         <div class="container">
             <a class="navbar-brand fw-bold" href="/">BlogMenia</a>
@@ -41,6 +51,7 @@
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
                     {% if user.is_authenticated %}
@@ -49,6 +60,12 @@
                         </li>
                         <li class="nav-item me-2">
                             <a class="nav-link" href="{% url 'create_blog' %}">Create Blog</a>
+                        </li>
+                        <li class="nav-item me-2">
+                            <!-- Search Toggle Button -->
+                            <button class="btn btn-outline-light btn-sm nav-link" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSearch" aria-expanded="false" aria-controls="navbarSearch">
+                                Search
+                            </button>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link btn btn-danger btn-sm text-white" href="{% url 'logout' %}">Logout</a>
@@ -65,9 +82,13 @@
             </div>
         </div>
     </nav>
+</header>
+
+
+ 
 
     <!-- Main Content -->
-    <main class="flex-grow-1 py-4">
+    <main class="flex-grow-1 py-2">
         <div class="container">
             {% block content %}
             <!-- Default Content -->
