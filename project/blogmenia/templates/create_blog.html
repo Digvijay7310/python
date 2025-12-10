@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block title %}Create Blog - BlogMenia{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8 col-12">
+
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h2 class="card-title mb-4 text-center">Create Blog</h2>
+
+                    <form method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+
+                        <!-- Title Field -->
+                        <div class="mb-3">
+                            <label for="title" class="form-label">Title</label>
+                            <input type="text" class="form-control" id="title" name="title" placeholder="Enter blog title" required>
+                        </div>
+
+                        <!-- Content Field -->
+                        <div class="mb-3">
+                            <label for="content" class="form-label">Content</label>
+                            <textarea class="form-control" id="content" name="content" rows="8" placeholder="Write your blog content..." required></textarea>
+                        </div>
+
+                        <!-- Image Upload Field -->
+                        <div class="mb-3">
+                            <label for="image" class="form-label">Image</label>
+                            <input class="form-control" type="file" id="image" name="image">
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">Post Blog</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

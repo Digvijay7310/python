@@ -9,7 +9,7 @@ Chai aur tweet
 <h1 class="text-center mt-4">Welcome to Chai's Django Project</h1>
 
 <a class="btn btn-primary mb-4" href="{% url 'tweet_create' %}">Create a tweet</a>
-<div class="container row gap-2">
+<div class="container row gap-3 d-flex justify-content-center">
     {% for tweet in  tweets %}
     <div class="card" style="width: 18rem;">
   <div class="ratio ratio-16x9">
