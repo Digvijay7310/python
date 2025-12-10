@@ -53,5 +53,5 @@ def edit_profile(request):
         if fullName:
             user.fullName = fullName
             user.save()
-            return redirect('profile')
+            return redirect('profile_view')
     return render(request, 'edit_profile.html', {'user': user})

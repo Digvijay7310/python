@@ -21,7 +21,7 @@ def blog_create(request):
     return render(request, 'create_blog.html')
 
 def home(request):
-    blogs = Blog.objects.all()
+    blogs = Blog.objects.all().order_by('-createdAt')
     return render(request, 'home.html', {'blogs': blogs})
 
 def blog_detail(request, id):
