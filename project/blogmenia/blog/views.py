@@ -62,7 +62,7 @@ def blog_edit(request, id):
         if request.FILES.get('image'):
             blog.image = request.FILES.get('image')
         blog.save()
-        return redirect('profile')
+        return redirect('home')
     
     return render(request, 'edit_blog.html', {'blog': blog})
 
